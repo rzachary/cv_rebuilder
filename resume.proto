@@ -1,0 +1,63 @@
+syntax = "proto3"
+
+package resume;
+
+
+message Person {
+	string Person_Name = 1;
+
+	message Address {
+		string Street_Num = 1;
+		string Street_Address = 2;
+		string City = 3;
+		string State = 4;
+		string Zip_Code = 5;
+	}
+
+	Address address = 2;
+	string Phone_Number = 3;
+	string Email = 4;
+	string Website = 5;
+	string TWitter = 6;
+}
+
+message Skills {
+	repeated string skill_name = 1;
+}
+
+message Job {
+	string Company_Name = 1;
+	string Job_Title = 2;
+	string Start_Date = 3;
+	string End_Date;
+}
+
+message Education {
+	string School_Name = 1;
+	string Degree = 2;
+	string Start_Date = 3;
+	string End_Date = 4;
+}
+
+message Certification {
+	string Cert_Text = 1;
+	string Cert_Name = 2;
+	string Date_Received = 3;
+}
+
+message Award {
+	string Award_Text = 1;
+	string Date_Received = 2;
+}
+
+message Papers {
+	string Title = 1;
+}
+
+message Presentation {
+	Paper presentation_paper = 1;
+	string Conference_Name = 2;
+	string Context_Name = 3;
+	string Date_Given = 4;
+	string Description = 5;
+}

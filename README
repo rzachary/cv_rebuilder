@@ -1,0 +1,57 @@
+# CV Rebuilder
+
+I moved all of my CV and Resume information off of Linked In so that I have more control and ownership of the data.
+I use this Go application to build my resume dynamically and add information easily and with more consistency.
+
+
+## Data Structure
+
+Person (Me in this case)
+	Name String[25]
+	Address
+	Phone String[15]
+	Email String[30]
+	Website String[15]
+	Twitter String[12]
+
+Introduction_Text String[250]
+
+Skills
+	List of Strings?
+
+Job
+	Company_Name Text String[20]
+	Job_Title Sting [25]
+	Start_Date Date
+	End_Date Date
+	Job_Duties 1..3 String[75]
+
+Education
+	School
+	Degree
+	Start_Date
+	End_Date
+
+Certifications
+	Date_Received Date
+	Cert_Text String[25]
+	Cert_Number String[20]
+
+Award
+	Date_Received Date
+	Award_Text String[25]
+
+Papers and Presentations
+	Date_Given Date
+	Conference_Name String[20]
+	Context_Name String[30]
+	Title
+
+## Input and Output
+
+New Resume Items will be stored in a JSON file local to the application
+
+
+## Usage
+commabnd cv_builder
+cv_builder job add
